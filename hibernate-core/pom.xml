@@ -18,9 +18,11 @@
                <instructions>
                   <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                   <Import-Package>*;resolution:=optional</Import-Package>
-                  <Embed-Transitive>false</Embed-Transitive>
+                  <Embed-Transitive>true</Embed-Transitive>
 
-                  <Embed-Dependency>*;
+                  <Embed-Dependency>
+                     groupId=!(org.jboss.spec.javax.transaction|dom4j
+                     |org.javassist);
                      scope=compile|runtime|test;inline=true
                   </Embed-Dependency>
 
@@ -45,10 +47,10 @@
             </exclusion>
          </exclusions>
       </dependency>
-         <dependency>
-            <groupId>com.cyclone.osgi</groupId>
-            <artifactId>jboss-logging</artifactId>
-            <version>3.1.1.GA</version>
-         </dependency>
-      </dependencies>
+      <dependency>
+         <groupId>com.cyclone.osgi</groupId>
+         <artifactId>jboss-logging</artifactId>
+         <version>3.1.1.GA</version>
+      </dependency>
+   </dependencies>
 </project>
