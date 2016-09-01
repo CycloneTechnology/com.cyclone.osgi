@@ -11,7 +11,7 @@
       <module>vijava</module>
       <module>org.w3c.tidy</module>
       <module>dom4j</module>
-      <module>jboss-logging</module>
+      
    </modules>
    <distributionManagement>
       <repository>
