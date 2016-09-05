@@ -11,8 +11,10 @@
       <module>vijava</module>
       <module>org.w3c.tidy</module>
       <module>dom4j</module>
-      
    </modules>
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
    <distributionManagement>
       <repository>
          <uniqueVersion>false</uniqueVersion>
