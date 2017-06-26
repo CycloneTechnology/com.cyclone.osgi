@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.cyclone.osgi</groupId>
-    <artifactId>com.cyclone.osgi</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>org.w3c.tidy</artifactId>
-  <version>0.9.38</version>
-  <packaging>bundle</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>com.cyclone.osgi</groupId>
+      <artifactId>com.cyclone.osgi</artifactId>
+      <version>1.0.0</version>
+   </parent>
+   <artifactId>org.w3c.tidy</artifactId>
+   <version>0.9.38</version>
+   <packaging>bundle</packaging>
    <build>
       <plugins>
          <plugin>
@@ -19,14 +20,11 @@
                   <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                   <Import-Package>*;resolution:=optional</Import-Package>
                   <Embed-Transitive>false</Embed-Transitive>
-
-                  <Embed-Dependency>*;
-                     scope=compile|runtime|test;inline=true
+                  <Embed-Dependency>
+                     artifactId=${project.artifactId};inline=true
                   </Embed-Dependency>
-
                   <Embed-Directory>target/dependency</Embed-Directory>
-                  <_exportcontents>
-                     *;version=${project.version}
+                  <_exportcontents> *;version=${project.version}
                   </_exportcontents>
                </instructions>
             </configuration>
@@ -38,6 +36,7 @@
          <groupId>org.w3c</groupId>
          <artifactId>org.w3c.tidy</artifactId>
          <version>${project.version}</version>
+         <scope>provided</scope>
       </dependency>
    </dependencies>
 </project>
