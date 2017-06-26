@@ -23,8 +23,7 @@
 
                   <Embed-Dependency>
                      groupId=!(org.jboss.spec.javax.transaction|dom4j
-                     |org.javassist);
-                     scope=compile|runtime|test;inline=true
+                     |org.javassist);inline=true
                   </Embed-Dependency>
 
                   <Embed-Directory>target/dependency</Embed-Directory>
@@ -41,6 +40,7 @@
          <groupId>org.hibernate</groupId>
          <artifactId>hibernate-core</artifactId>
          <version>${project.version}</version>
+         <scope>provided</scope>
       </dependency>
    </dependencies>
 </project>
