@@ -21,12 +21,14 @@
       <module>spring-jms</module>
       
       <module>spring-orm</module>
+      <module>spring-oxm</module>
       <module>spring-tx</module>
       <module>spring-web</module>
       <module>spring-webmvc</module>
       <module>spring-webmvc-portlet</module>
       <module>spring-expression</module>
       <module>spring-asm</module>
+
       <module>spring-integration-amqp</module>
       <module>spring-integration-core</module>
       <module>spring-integration-event</module>
@@ -36,7 +38,9 @@
       <module>spring-integration-jms</module>
       <module>spring-integration-jmx</module>
       <module>spring-integration-stream</module>
+
       <module>spring-messaging</module>
+
       <module>spring-security-acl</module>
       <module>spring-security-config</module>
       <module>spring-security-core</module>
