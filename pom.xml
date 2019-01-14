@@ -46,9 +46,7 @@
       <module>spring-security-core</module>
       <module>spring-security-taglibs</module>
       <module>spring-security-web</module>
-      <module>jjwt-api</module>
-      <module>jjwt-impl</module>
-      <module>jjwt-jackson</module>
+      <module>jjwt</module>
    </modules>
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

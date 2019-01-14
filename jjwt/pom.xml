@@ -7,7 +7,7 @@
       <artifactId>com.cyclone.osgi</artifactId>
       <version>1.0.0</version>
    </parent>
-   <artifactId>jjwt-impl</artifactId>
+   <artifactId>jjwt</artifactId>
    <version>${jjwt.version}</version>
    <packaging>bundle</packaging>
    <build>
@@ -19,11 +19,12 @@
                <unpackBundle>true</unpackBundle>
                <instructions>
                   <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                  <Import-Package>*;resolution:=optional</Import-Package>
+                  <Import-Package>
+                  *;resolution:=optional,
+                  com.fasterxml.jackson.databind
+                  </Import-Package>
                   <Embed-Transitive>false</Embed-Transitive>
-                  <Embed-Dependency>
-                     artifactId=${project.artifactId};inline=true
-                  </Embed-Dependency>
+                  <Embed-Dependency>*;inline=true</Embed-Dependency>
                   <Embed-Directory>target/dependency</Embed-Directory>
                   <_exportcontents> *;version=${project.version}
                   </_exportcontents>
@@ -35,27 +36,16 @@
    <dependencies>
       <dependency>
          <groupId>io.jsonwebtoken</groupId>
-         <artifactId>jjwt-impl</artifactId>
-         <version>${jjwt.version}</version>
-         <exclusions>
-            <exclusion>
-               <groupId>io.jsonwebtoken</groupId>
-               <artifactId>jjwt-api</artifactId>
-            </exclusion>
-            <exclusion>
-               <groupId>io.jsonwebtoken</groupId>
-               <artifactId>jjwt-jackson</artifactId>
-            </exclusion>
-         </exclusions>
-         <scope>provided</scope>
-      </dependency>
-      <dependency>
-         <groupId>com.cyclone.osgi</groupId>
          <artifactId>jjwt-api</artifactId>
          <version>${jjwt.version}</version>
       </dependency>
       <dependency>
-         <groupId>com.cyclone.osgi</groupId>
+         <groupId>io.jsonwebtoken</groupId>
+         <artifactId>jjwt-impl</artifactId>
+         <version>${jjwt.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>io.jsonwebtoken</groupId>
          <artifactId>jjwt-jackson</artifactId>
          <version>${jjwt.version}</version>
       </dependency>
