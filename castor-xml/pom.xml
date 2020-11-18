@@ -45,8 +45,8 @@
          <scope>provided</scope>
       </dependency>
       <dependency>
-         <groupId>com.cyclone.osgi</groupId>
-         <artifactId>spring-context</artifactId>
+         <groupId>org.apache.servicemix.bundles</groupId>
+         <artifactId>org.apache.servicemix.bundles.spring-context</artifactId>
          <version>${spring.version}</version>
       </dependency>
    </dependencies>
