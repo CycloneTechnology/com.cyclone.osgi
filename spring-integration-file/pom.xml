@@ -42,10 +42,6 @@
                     <artifactId>spring-integration-core</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>aopalliance</groupId>
-                    <artifactId>aopalliance</artifactId>
-                </exclusion>
-                <exclusion>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-core</artifactId>
                 </exclusion>
@@ -79,8 +75,8 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.cyclone.osgi</groupId>
-            <artifactId>spring-expression</artifactId>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.spring-expression</artifactId>
             <version>${spring.version}</version>
             <scope>compile</scope>
         </dependency>
