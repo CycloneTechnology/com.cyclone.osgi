@@ -9,7 +9,6 @@
         <module>castor-xml</module>
         <module>vijava</module>
         <module>org.w3c.tidy</module>
-        <module>spring-asm</module>
 
         <module>spring-integration-amqp</module>
         <module>spring-integration-core</module>
@@ -32,7 +31,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring.version>4.3.9.RELEASE_1</spring.version>
-        <spring_asm.version>3.1.3.RELEASE</spring_asm.version>
         <spring_integration.version>4.3.10.RELEASE</spring_integration.version>
         <spring_security.version>4.2.3.RELEASE</spring_security.version>
         <jjwt.version>0.10.5</jjwt.version>
